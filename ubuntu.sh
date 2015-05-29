@@ -1,8 +1,10 @@
 #!/bin/bash
 
 apt-get update
-sudo apt-get install fail2ban
+apt-get install fail2ban
 
 cd /etc/fail2ban
-sudo cp jail.conf jail.local
+cp jail.conf jail.local
+
+/etc/init.d/fail2ban start
 
